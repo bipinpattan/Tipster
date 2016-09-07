@@ -39,6 +39,7 @@ class ViewController: UIViewController {
     }
 
     func setupUI() {
+        self.billField.becomeFirstResponder()
         self.tipControl.selectedSegmentIndex = loadDefaultTipPercentage()
     }
     
