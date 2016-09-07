@@ -19,6 +19,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        setupUI()
+        doTipCalculations()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,6 +35,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateTip(sender: AnyObject) {
+        doTipCalculations()
+    }
+
+    func setupUI() {
+        self.tipControl.selectedSegmentIndex = loadDefaultTipPercentage()
+    }
+    
+    func loadDefaultTipPercentage() -> Int {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        return defaults.integerForKey("kDefaultTipPercent")
+    }
+    
+    func doTipCalculations() {
         let tipPercentages = [0.18, 0.20, 0.22]
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
