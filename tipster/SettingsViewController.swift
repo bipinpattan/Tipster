@@ -61,6 +61,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func saveDefaultTipPercentage(percentage: Int) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(percentage, forKey: "kDefaultTipPercent")
+        defaults.synchronize()
     }
 
     func loadDefaultTipPercentage() -> Int {
