@@ -13,6 +13,7 @@
 		1B1A6A9A1D7FB9A100446ABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B1A6A991D7FB9A100446ABF /* Assets.xcassets */; };
 		1B1A6A9D1D7FB9A100446ABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B1A6A9B1D7FB9A100446ABF /* LaunchScreen.storyboard */; };
 		1B1B49DE1D7FCB6D000A432F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B49DD1D7FCB6D000A432F /* SettingsViewController.swift */; };
+		1BBF7CC91D8A236E0040F758 /* tipster.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BBF7CC81D8A236E0040F758 /* tipster.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1B1A6A9C1D7FB9A100446ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B1A6A9E1D7FB9A100446ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B1B49DD1D7FCB6D000A432F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1BBF7CC81D8A236E0040F758 /* tipster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tipster.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +63,19 @@
 				1B1A6A961D7FB9A100446ABF /* Main.storyboard */,
 				1B1B49DD1D7FCB6D000A432F /* SettingsViewController.swift */,
 				1B1A6A991D7FB9A100446ABF /* Assets.xcassets */,
+				1BBF7CC71D8A236E0040F758 /* Resources */,
 				1B1A6A9B1D7FB9A100446ABF /* LaunchScreen.storyboard */,
 				1B1A6A9E1D7FB9A100446ABF /* Info.plist */,
 			);
 			path = tipster;
+			sourceTree = "<group>";
+		};
+		1BBF7CC71D8A236E0040F758 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BBF7CC81D8A236E0040F758 /* tipster.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B1A6A9D1D7FB9A100446ABF /* LaunchScreen.storyboard in Resources */,
+				1BBF7CC91D8A236E0040F758 /* tipster.png in Resources */,
 				1B1A6A9A1D7FB9A100446ABF /* Assets.xcassets in Resources */,
 				1B1A6A981D7FB9A100446ABF /* Main.storyboard in Resources */,
 			);
