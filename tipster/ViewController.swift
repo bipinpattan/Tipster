@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         setupUI()
         doTipCalculations()
     }
@@ -30,11 +30,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func onTap(sender: AnyObject) {
+    @IBAction func onTap(_ sender: AnyObject) {
         view.endEditing(true)
     }
 
-    @IBAction func calculateTip(sender: AnyObject) {
+    @IBAction func calculateTip(_ sender: AnyObject) {
         doTipCalculations()
     }
 
@@ -44,8 +44,8 @@ class ViewController: UIViewController {
     }
     
     func loadDefaultTipPercentage() -> Int {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        return defaults.integerForKey("kDefaultTipPercent")
+        let defaults = UserDefaults.standard
+        return defaults.integer(forKey: "kDefaultTipPercent")
     }
     
     func doTipCalculations() {

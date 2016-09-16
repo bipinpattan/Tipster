@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         setupUI()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         let savedPercent = loadDefaultTipPercentage()
         self.pickerView.selectRow(savedPercent, inComponent: 0, animated: true)
     }
@@ -39,34 +39,34 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
 
     // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     // The number of rows of data
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
     
     // The data to return for the row and component (column) that's being passed in
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("Selection : \(row)")
         saveDefaultTipPercentage(row)
     }
     
-    func saveDefaultTipPercentage(percentage: Int) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(percentage, forKey: "kDefaultTipPercent")
+    func saveDefaultTipPercentage(_ percentage: Int) {
+        let defaults = UserDefaults.standard
+        defaults.set(percentage, forKey: "kDefaultTipPercent")
         defaults.synchronize()
     }
 
     func loadDefaultTipPercentage() -> Int {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        return defaults.integerForKey("kDefaultTipPercent")
+        let defaults = UserDefaults.standard
+        return defaults.integer(forKey: "kDefaultTipPercent")
     }
     
     /*
